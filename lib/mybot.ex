@@ -2,6 +2,8 @@ defmodule MyBot do
   use Application
   alias Alchemy.Client
 
+
+
   defmodule Commands do
     use Alchemy.Cogs
 
@@ -13,18 +15,19 @@ defmodule MyBot do
     Cogs.def echo(string) do
       Cogs.say string
     end
+    
 
     Cogs.def sam do
       Cogs.say "Now Sam has a command too!"
     end
+  end
 
 
   def start(_type, _args) do
-    run = Client.start("NDMzMzQ2ODY2NjYzNTIyMzE5.Da6lhQ.S28_JpAeo1NRBp2jAvjo8mqm4DU")
+    run = Client.start("NDMzMzQ2ODY2NjYzNTIyMzE5.Da6lhQ.S28_JpAeo1NRBp2jAvjo8mqm4DU") 
     Cogs.set_prefix("|")
     use Commands
     run
-  end
   end
 end
 
