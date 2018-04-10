@@ -25,7 +25,7 @@ defmodule MyBot do
 
   def start(_type, _args) do
     run = Client.start("NDMzMzQ2ODY2NjYzNTIyMzE5.Da6lhQ.S28_JpAeo1NRBp2jAvjo8mqm4DU") 
-    CommandHandler.set_prefix("|")
+
     use Commands
     run
   end
